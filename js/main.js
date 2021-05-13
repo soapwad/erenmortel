@@ -91,22 +91,22 @@ $("#menu-toggle").click(function(e) {
     });
 $("#first-button").click(function() {
     $('html, body').animate({
-        scrollTop: $("#about").offset().top
+        scrollTop: $(".about").offset().top
     }, 2000);
 });
 $("#second-button").click(function() {
     $('html, body').animate({
-        scrollTop: $("#education-and-experience").offset().top
+        scrollTop: $(".education-and-experience").offset().top
     }, 2000);
 });
 $("#third-button").click(function() {
     $('html, body').animate({
-        scrollTop: $("#skills-and-languages").offset().top
+        scrollTop: $(".skills-and-languages").offset().top
     }, 2000);
 });
 $("#fourth-button").click(function() {
     $('html, body').animate({
-        scrollTop: $("#awards-and-interests").offset().top
+        scrollTop: $(".awards-and-interests").offset().top
     }, 2000);
 });
 //Get the button:
