@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 img {
+  filter: sepia(100%) hue-rotate(275deg);
   -webkit-filter: sepia(100%) hue-rotate(275deg); 
 }
 img:hover {
@@ -55,6 +56,7 @@ a:hover {
   text-decoration: none !important; }
 
 .wp-block-cover-image {
+  z-index: -2; 
   height: 100vh;
   width: 100%;
   position: relative;
@@ -65,6 +67,7 @@ a:hover {
   background-position: 50% 0;
 }
 .wp-block-cover-image:before .has-background-dim:before {
+  z-index: -2;
   content: "";
   position: absolute;
   top: 0;
@@ -81,8 +84,9 @@ a:hover {
   padding-left: 75px;
   font-size: 3em;
   line-height: 1;
-  font-family: "compactablack"
-  background-color: white;
+  font-family: "compactablack";
+  background-color: rgba(0, 0, 0, 0.0);
+
 }
 
 p.eren {
@@ -103,17 +107,17 @@ p.eren {
   z-index: 1999;
   position: relative;
   width: 100%;
-  padding: 1rem; }
+  padding: 0.5rem; }
   @media (max-width: 991.98px) {
     .site-navbar {
-      padding-top: 3rem;
-      padding-bottom: 3rem; } }
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem; } }
   .site-navbar .toggle-button {
     position: absolute;
     right: 0px; }
   .site-navbar .site-logo {
     position: absolute;
-    font-size: 2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 0;
@@ -172,7 +176,7 @@ p.eren {
         padding: 0px 0;
         margin-top: 20px;
         margin-left: 0px;
-        background: #ffcced;
+        background-color: #ffcced;
         -webkit-transition: 0.2s 0s;
         -o-transition: 0.2s 0s;
         transition: 0.2s 0s; }
@@ -433,13 +437,12 @@ p.eren {
 }
 
 #sidebar-wrapper {
-    z-index: 1;
+    z-index: 0;
     position: absolute;
     right: 250px;
     width: 0;
-    height: 87%;
-    margin: 90px -250px 0 0;
-    overflow-y: auto;
+    height: 100%;
+    margin: 0 -250px 0 0;
     background: #ffcced;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -447,6 +450,9 @@ p.eren {
     transition: all 0.5s ease;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+#sidebar-wrapper a {
+  z-index: 99;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -552,62 +558,42 @@ p.eren {
 .main {
   position: relative;
 }
-#about {
-  padding: 125px 300px 100px 300px;
-  background-color: #ffe6f6;
-  z-index: 99;
-  border-top: 1px solid #000000;
+.content {
+  padding: 125px 0 100px 0;
+  z-index: 3;
   border-bottom: 1px solid #000000;
 }
-#education-and-experience {
-  padding: 125px 300px 100px 300px;
+.about {
+  background-color: #ffe6f6;
+  border-top: 1px solid #000000;
+}
+.education-and-experience {
   background-color: #fff;
-  z-index: 999;
-  border-bottom: 1px solid #000000;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 p.about {
   color: white;
 }
-#skills-and-languages {
-  padding: 125px 300px 100px 300px;
+.skills-and-languages {
   background-color: #ffe6f6;
-  z-index: 999;
-  border-bottom: 1px solid #000000;
 }
-#awards-and-interests {
-  padding: 125px 300px 100px 300px;
-  background-color: #fff;
-  z-index: 999;
-  border-bottom: 1px solid #000000;
-}
-#backtotop {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+.skills {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  line-height: 1;
 }
 
-#backtotop:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+.awards-and-interests {
+  background-color: #fff;
 }
-#contact {
-  padding: 75px 300px 50px 300px;
+.contact {
   background-color: #ffe6f6;
-  border-bottom: 1px solid #000000;
 }
-#footer {
+.footer {
   background-color: #ffcced;
-  padding: 50px 300px 50px 300px;
-  border-bottom: 1px solid #000000;
   font-size: 12px;
 }
 img.profile-pic {
@@ -686,8 +672,7 @@ h3.title, h2.title, h4.title {
 .cv {
   background-color: #000000;
   padding: 15px 20px 15px 20px;
-  border-radius: 5%;
-  color: #ff0000;
+  color: #ffcced;
 }
 .cv:hover {
   background-color: #ff0000;
@@ -697,4 +682,5 @@ h3.title, h2.title, h4.title {
   background-color: #bf99b2;
   color: #000000;
 }
+
 
