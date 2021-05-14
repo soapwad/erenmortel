@@ -24,7 +24,8 @@ body {
 
 p {
   color: #000000;
-  font-weight: 300; }
+  font-weight: 300; 
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -307,7 +308,7 @@ p.eren {
       padding: 10px 20px;
       display: block;
       position: relative;
-      color: #212529; }
+      color: #000000; }
       .site-mobile-menu .site-nav-wrap a:hover {
         color: #007bff; }
     .site-mobile-menu .site-nav-wrap li {
@@ -572,9 +573,12 @@ p.eren {
   padding-left: 10px;
   padding-right: 10px;
 }
-p.about {
-  color: white;
+#content-text {
+  color: #000000;
+  font-size: 21px;
+  line-height: 2em;
 }
+
 .skills-and-languages {
   background-color: #ffe6f6;
 }
